@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro'
+import logo from '../assets/logo-xs.svg'
+import { Image } from 'astro:assets'
+import '../styles/fonts.css'
+---
+
+<Layout title='alidos.de' >
+  <nav class='flex justify-between items-center px-8 py-4 bg-[#111111] text-white' >
+    <div>
+      <a href='/' >
+        <Image width='175' src={logo} alt='logo' />
+      </a>
+    </div>
+    <div>
+      <ul class='flex gap-8 font-semibold text-lg' >
+        <li>
+          <a class='hover:opacity-60' href='/shop' >Shop</a>
+        </li>
+        <li>
+          <a class='opacity-60' href='#' >Company</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div class='py-24 text-center bg-[#111111] text-white' >
+      <h2 class='mb-3 text-2xl italic font-palatino' >Company</h2>
+      <h1 class='font-extrabold text-9xl leading-[0.85] font-future' >
+        WELCOME TO
+        <br>
+        ALIDOS, INC.
+      </h1>
+    </div>
+    <video aria-describedby="Company-Hero Loop 032323" playsinline src="/company.mp4" autoplay loop muted  />
+  </main>
+  <footer>
+
+  </footer>
+</Layout>
