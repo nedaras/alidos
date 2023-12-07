@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  src: url(/fonts/HelveticaNeue-Medium-11.ttf);
+  font-family: Helvetica Neue;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .font-palatino {
   font-family: 'Palatino', 'Palatino', serif;
 }

@@ -3,22 +3,24 @@ import Layout from '../layouts/Layout.astro'
 import logo from '../assets/logo-xs.svg'
 import { Image } from 'astro:assets'
 import '../styles/fonts.css'
+
+import twitter from '../assets/logos/twitter.svg'
+import linkedin from '../assets/logos/linkedin.svg'
+import instagram from '../assets/logos/instagram.svg'
+import youtube from '../assets/logos/youtube.svg'
 ---
 
-<Layout title='alidos.de'>
+<Layout title='Welcome to ALIDOS, Inc. — ALIDOS, Inc.'>
   <nav class='flex justify-between items-center px-8 py-4 bg-[#111111] text-white'>
     <div>
       <a href='/'>
-        <Image width='175' src={logo} alt='logo' />
+        <Image draggable={false} width='175' src={logo} alt='logo' />
       </a>
     </div>
     <div>
       <ul class='flex gap-8 font-semibold text-lg'>
         <li>
-          <a class='hover:opacity-60' href='/shop'>Shop</a>
-        </li>
-        <li>
-          <a class='opacity-60' href='#'>Company</a>
+          <a href='/'>Company</a>
         </li>
       </ul>
     </div>
@@ -32,36 +34,62 @@ import '../styles/fonts.css'
     </h1>
   </div>
   <video aria-describedby='Company-Hero Loop 032323' preload='auto' playsinline src='/company.mp4' autoplay loop muted></video>
-  <main class='bg-white px-5 md:px-8 lg:px-10'>
-    <div class='mx-auto pt-10 md:pt-[60px] lg:pt-[76px] xl:pt-[100px] md:pb-5 xl:pb-8 w-full sm:w-[calc(10/12*100%-16px-10/12*16px)] xl:w-[calc(8/12*100%-16px-8/12*16px)] text-center'>
-      <span class='font-helvetica leading-tight text-xl md:text-[1.375rem] md:leading-[1.2] lg:text-[1.8125rem] xl:text-[2.125rem] 2xl:text-5xl 2xl:tracking-[-0.02em] tracking-[-0.01em]'> ALIDOS, Inc. is a team comprised of the Alidos, Jordan and Converse brands driven by a shared purpose to leave an enduring impact.</span>
-    </div>
+  <main class='bg-white px-5 md:px-8 lg:px-10 font-helvetica'>
+    <section class='mx-auto pt-10 md:pt-[60px] lg:pt-[76px] xl:pt-[100px] md:pb-5 xl:pb-8 w-full sm:w-[calc(10/12*100%-16px-10/12*16px)] xl:w-[calc(8/12*100%-16px-8/12*16px)] text-center'>
+      <span class='leading-tight text-xl md:text-[1.375rem] md:leading-[1.2] lg:text-[1.8125rem] xl:text-[2.125rem] 2xl:text-5xl 2xl:tracking-[-0.02em] tracking-[-0.01em]'> ALIDOS, Inc. is a team comprised of the Alidos, Jordan and Converse brands driven by a shared purpose to leave an enduring impact.</span>
+    </section>
+    <section class='mt-[60px] sm:mt-[76px] xl:mt-[120px]'>
+      <h2 class='text-xl font-medium xl:text-[1.625rem] tracking-[-0.02em] leading-[1.1!important] sm:leading-[1.2!important] mb-5 lg:mb-6 xl:mb-7'>Contact Us</h2>
+       +370
+    </section>
   </main>
   <footer class='text-white font-helvetica text-sm tracking-[0.01em] px-5 md:px-8 lg:px-10 pt-10 py-10'>
     <div class='grid grid-cols-2 sm:grid-cols-4 gap-x-4 lg:text-base'>
       <ul>
-        <li>Stories</li>
-        <li class='mt-3'>Impact</li>
-        <li class='mt-3'>Company</li>
-        <li class='mt-3'>Newsroom</li>
+        <li class='hover:text-[#808080] active:text-[#808080]'>Stories</li>
+        <li class='mt-3 hover:text-[#808080] active:text-[#808080]'>Impact</li>
+        <li class='mt-3 hover:text-[#808080] active:text-[#808080]'>
+          <a href='/'> Company</a>
+        </li>
       </ul>
       <ul>
-        <li>Shop Alidos.com</li>
-        <li class='mt-3'>Shop Converse.com</li>
-        <li class='mt-3'>Get Help</li>
-        <li class='mt-3'>Investors</li>
+        <li class='hover:text-[#808080] active:text-[#808080]'>Shop Alidos.com</li>
+        <li class='mt-3 hover:text-[#808080] active:text-[#808080]'>Shop Converse.com</li>
+        <li class='mt-3 hover:text-[#808080] active:text-[#808080]'>Get Help</li>
       </ul>
       <ul class='flex pt-[60px] sm:col-start-1 sm:col-span-4 md:col-start-3 md:col-span-2 md:pt-0 md:justify-end'>
-        <li class='bg-[#2d2d2d] w-[30px] h-[30px] rounded-full'>A</li>
-        <li class='ml-4 bg-[#2d2d2d] w-[30px] h-[30px] rounded-full'>B</li>
-        <li class='ml-4 bg-[#2d2d2d] w-[30px] h-[30px] rounded-full'>C</li>
-        <li class='ml-4 bg-[#2d2d2d] w-[30px] h-[30px] rounded-full'>D</li>
+        <li class='bg-[#2d2d2d] w-[30px] h-[30px] rounded-full grid place-items-center hover:bg-[#707070] active:bg-[#707070]'>
+          <a href='https://twitter.com/Nike'>
+            <Image draggable={false} src={twitter} alt='twitter' width='25' height='24' />
+          </a>
+        </li>
+        <li class='ml-4 bg-[#2d2d2d] w-[30px] h-[30px] rounded-full grid place-items-center hover:bg-[#707070] active:bg-[#707070]'>
+          <a href='https://www.linkedin.com/company/nike'>
+            <Image draggable={false} src={linkedin} alt='linkedin' width='24' height='24' />
+          </a>
+        </li>
+        <li class='ml-4 bg-[#2d2d2d] w-[30px] h-[30px] rounded-full grid place-items-center hover:bg-[#707070] active:bg-[#707070]'>
+          <a href='https://www.instagram.com/nike/'>
+            <Image draggable={false} src={instagram} alt='instagram' width='24' height='24' />
+          </a>
+        </li>
+        <li class='ml-4 bg-[#2d2d2d] w-[30px] h-[30px] rounded-full grid place-items-center hover:bg-[#707070] active:bg-[#707070]'>
+          <a href='https://www.youtube.com/user/NIKE'>
+            <Image draggable={false} src={youtube} alt='youtube' width='24' height='24' />
+          </a>
+        </li>
       </ul>
     </div>
     <ul class='pt-5 md:mt-[76px] text-[0.8125rem] leading-[1.5!important] text-[#808080] md:flex flex-wrap w-full lg:justify-end'>
-      <li class='mt-2 md:mt-0 md:w-auto md:mr-6'>Terms of Use</li>
-      <li class='mt-2 md:mt-0 md:w-auto md:mr-6'>Alidos Privacy Policy</li>
-      <li class='mt-2 md:mt-0 md:w-auto md:mr-6'>CA Supply Chains Act</li>
+      <li class='mt-2 md:mt-0 md:w-auto md:mr-6'>
+        <a href='http://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&uxId=com.nike.nikefooter&country=US&language=en&requestType=redirect' class='hover:text-white'> Terms of Use</a>
+      </li>
+      <li class='mt-2 md:mt-0 md:w-auto md:mr-6'>
+        <a href='http://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&uxId=com.nike.nikefooter&country=US&language=en&requestType=redirect' class='hover:text-white'> Alidos Privacy Policy</a>
+      </li>
+      <li class='mt-2 md:mt-0 md:w-auto md:mr-6'>
+        <a href='https://nike.com/help/a/supply-chain' class='hover:text-white'> CA Supply Chains Act</a>
+      </li>
       <li class='mt-2 md:mt-1 md:w-full lg:w-auto lg:mt-0'>© 2023 ALIDOS, Inc. All Rights Reserved</li>
     </ul>
   </footer>
